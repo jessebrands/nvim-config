@@ -29,6 +29,7 @@ lsp_zero.set_preferences({
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
+    ensure_installed = { "lua_ls", "gopls" },
 	handlers = {
 		lsp_zero.default_setup,
 	},
