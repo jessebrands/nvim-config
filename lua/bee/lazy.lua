@@ -32,6 +32,18 @@ require('lazy').setup({
 		'folke/todo-comments.nvim',
 		dependencies = { 'nvim-lua/plenary.nvim' },
 	},
+	{
+		'lewis6991/gitsigns.nvim',
+		opts = {
+			signs = {
+				add = { text = '+' },
+				change = { text = '~' },
+				delete = { text = 'v' },
+				topdelete = { text = '^' },
+				changedelete = { text = '-' },
+			},
+		},
+	},
 	-- LSP
 	{
 		'VonHeikemen/lsp-zero.nvim', branch = 'v4.x',
@@ -58,6 +70,7 @@ require('lazy').setup({
 			
 			'saadparwaiz1/cmp_luasnip',
 			'hrsh7th/cmp-nvim-lsp',
+			'hrsh7th/cmp-nvim-lsp-signature-help',
 			'hrsh7th/cmp-path',
 		},
 	},

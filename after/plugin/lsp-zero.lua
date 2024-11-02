@@ -16,8 +16,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 			vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
 		end
 
-		map('gd', require('telescope.builtin').lsp_definitions, '[g]oto [d]efinitions')
-
+		map('<leader>gd', require('telescope.builtin').lsp_definitions, '[g]oto [d]efinitions')
+		map('<leader>gD', vim.lsp.buf.declaration, '[g]oto [D]eclaration')
+		map('<leader>gr', require('telescope.builtin').lsp_references, '[g]oto [r]references')
+		map('<leader>gi', require('telescope.builtin').lsp_implementations, '[g]oto [i]mplementations')
+		map('<leader>rn', vim.lsp.buf.rename, '[r]e[n]ame')
 	end,
 })
 

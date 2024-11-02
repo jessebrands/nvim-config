@@ -12,7 +12,7 @@ cmp.setup({
 		-- completion = cmp.config.window.bordered(),
 	  	-- documentation = cmp.config.window.bordered(),
 	},
-	-- completion = { completeopt = 'menu,menuone,noinsert' },
+	completion = { completeopt = 'menu,menuone,noinsert,preview,popup' },
 	mapping = cmp.mapping.preset.insert {
 		['<C-j>'] = cmp.mapping.select_next_item(),
 		['<C-k>'] = cmp.mapping.select_prev_item(),
@@ -23,6 +23,7 @@ cmp.setup({
 	sources = {
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },
+		{ name = 'nvim_lsp_signature_help' },
 	},
 })
 
